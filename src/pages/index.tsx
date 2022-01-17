@@ -1,14 +1,27 @@
-import React, { ReactElement } from 'react';
-import { useRouter } from 'next/router';
+import React, { ReactElement, useState } from 'react';
 
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
+import Button from '../components/button';
+import Modal from '../components/modal';
+import classNames from 'classnames';
 
 const IndexPage = (): ReactElement => {
-  const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const toggleModal = () => {
+    return setIsModalOpen(!isModalOpen);
+  };
+
+  const rulesBtnClasses = classNames('absolute', 'mx-auto', 'bottom-14', 'left-1/2', 'md:right-6', 'capitalize');
 
   return (
-    <Layout title="Home | Next.js + TypeScript Example" pathname={router.pathname}>
-      <h2 className="text-purple-600">Some purple text to show tailwind works</h2>
+    <Layout>
+      <Button className={rulesBtnClasses} onClick={toggleModal}>
+        Rules
+      </Button>
+      <Modal title="Rules" open={isModalOpen} onClose={toggleModal} center>
+        <img className="mx-auto" src="/assets/images/image-rules.svg" height={300} width={300} />
+      </Modal>
     </Layout>
   );
 };
