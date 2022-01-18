@@ -15,7 +15,7 @@ const Step2 = ({ userChoice }: Step2Props): ReactElement => {
       </div>
       <div className="flex flex-col items-center space-y-4">
         <p className="text-2xl text-white">The House Picked</p>
-        <div className="bg-black rounded-full w-40 h-40 opacity-20"></div>
+        <div className="bg-black rounded-full w-32 h-32 opacity-20"></div>
       </div>
     </div>
   );

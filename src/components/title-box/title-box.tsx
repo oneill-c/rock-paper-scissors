@@ -11,14 +11,15 @@ const TitleBox = ({ score, className }: TitleBoxProps): ReactElement => {
     'items-center',
     'border',
     'rounded-lg',
-    'p-8',
+    'px-8',
+    'py-4',
     'text-white',
     className
   );
 
   return (
     <div className={classes}>
-      <img src="/assets/images/logo.svg" />
+      <img className="h-16" src="/assets/images/logo.svg" />
       <ScoreBox score={score} />
     </div>
   );

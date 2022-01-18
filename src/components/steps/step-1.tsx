@@ -8,15 +8,21 @@ export interface Step1Props {
 
 const Step1 = ({ onChoiceClick }: Step1Props): ReactElement => {
   return (
-    <div className="self-center" style={{ minWidth: '32rem' }}>
+    <div className="self-center mx-auto">
       <div
-        className="relative mt-24 mx-auto w-full h-72"
+        className="relative"
         // eslint-disable-next-line quotes
-        style={{ backgroundImage: "url('/assets/images/bg-triangle.svg')", backgroundRepeat: 'no-repeat' }}
+        style={{
+          backgroundImage: "url('/assets/images/bg-triangle.svg')",
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'contain',
+          width: '16rem',
+          height: '14rem',
+        }}
       >
-        <RockPaperScissorsButton type="PAPER" className="absolute -left-24 -top-20" onChoiceClick={onChoiceClick} />
-        <RockPaperScissorsButton type="SCISSORS" className="absolute -top-20 right-24" onChoiceClick={onChoiceClick} />
-        <RockPaperScissorsButton type="ROCK" className="absolute -bottom-20 ml-16" onChoiceClick={onChoiceClick} />
+        <RockPaperScissorsButton type="PAPER" className="absolute -left-14 -top-20" onChoiceClick={onChoiceClick} />
+        <RockPaperScissorsButton type="SCISSORS" className="absolute -top-20 -right-12" onChoiceClick={onChoiceClick} />
+        <RockPaperScissorsButton type="ROCK" className="absolute -bottom-16 ml-16" onChoiceClick={onChoiceClick} />
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const Layout = ({ score, children }: Props): ReactElement => {
     'from-blue-1',
     'to-blue-2'
   );
-  const containerClasses = classNames('flex', 'flex-col', 'space-y-14', 'mx-8', 'mt-8', 'md:mx-60', 'justify-center');
+  const containerClasses = classNames('flex', 'flex-col', 'space-y-40', 'mx-8', 'mt-8', 'md:mx-60');
 
   return (
     <div className={classes}>
