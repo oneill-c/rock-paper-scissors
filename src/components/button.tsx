@@ -1,15 +1,16 @@
 import classNames from 'classnames';
 import React, { HTMLProps, ReactElement } from 'react';
 
-const Button = ({ className, ...rest }: HTMLProps<HTMLButtonElement>): ReactElement => {
+export type ButtonProps = { primary?: boolean } & HTMLProps<HTMLButtonElement>;
+const Button = ({ primary, className, ...rest }: ButtonProps): ReactElement => {
   const classes = classNames(
-    'bg-transparent',
     'border',
     'border-white',
-    'text-white',
     'px-8',
     'py-2',
     'rounded-lg',
+    { 'bg-transparent text-white': !primary },
+    { 'bg-white text-black': primary },
     className
   );
   return <button {...rest} type="button" className={classes} />;
