@@ -10,11 +10,6 @@ import { RPSBeatsEnum } from '../constants';
  * the house.
  */
 export const determineIfUserWon = (userChoice: RockPaperScissors, houseChoice: RockPaperScissors): boolean => {
-  // return early for this invalid case
-  if (userChoice === houseChoice) {
-    return false;
-  }
-
   // use enum to check if what `userChoice` can beat matches the value of `houseChoice`
   return RPSBeatsEnum[userChoice] === houseChoice;
 };

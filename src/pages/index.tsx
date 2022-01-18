@@ -31,15 +31,6 @@ const IndexPage = (): ReactElement => {
     }
   }, [userChoice]);
 
-  // useEffect to detect changes to `userChoice` and set `houseChoice` based on that
-  useEffect(() => {
-    if (userChoice) {
-      setTimeout(() => {
-        setHouseChoice(getRandomHouseResult(userChoice));
-      }, 2000);
-    }
-  }, [userChoice]);
-
   // useEffect to detect changes to `houseChoice` and set whether user has won or not
   useEffect(() => {
     if (houseChoice) {
