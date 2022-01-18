@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import React, { HTMLProps } from 'react';
+import React, { HTMLProps, ReactElement } from 'react';
 
 export type CIBProps = { imageSrc: string; borderColor: string } & HTMLProps<HTMLButtonElement>;
 
-const CircularImageButton = ({ className, imageSrc, borderColor, onClick }: CIBProps) => {
+const CircularImageButton = ({ className, imageSrc, borderColor, onClick }: CIBProps): ReactElement => {
   const classes = classNames('bg-white', 'rounded-full', 'p-8', className);
 
   return (

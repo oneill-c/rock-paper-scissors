@@ -10,7 +10,7 @@ import { allPossibleChoices } from './constants';
  * @param {boolean | null | undefined} val
  * @returns {boolean}
  */
-export const isBoolean = (val: boolean | null | undefined) => {
+export const isBoolean = (val: boolean | null | undefined): boolean => {
   return 'boolean' === typeof val;
 };
 
