@@ -1,9 +1,9 @@
 import React, { ReactNode, ReactElement, useState } from 'react';
 import classNames from 'classnames';
 
-import Button from '../components/button';
-import Modal from '../components/modal';
-import TitleBox from '../components/title-box/title-box';
+import Button from './button';
+import Modal from './modal';
+import TitleBox from './title-box/title-box';
 
 type Props = {
   score: number;
